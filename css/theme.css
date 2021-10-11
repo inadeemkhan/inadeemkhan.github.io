@@ -1,0 +1,278 @@
+/* Side bar css start from here */
+body.nimbus-is-editor {
+    background: #d3d3d32b;
+}
+.about-me .github-follow-section a img.git-logo {
+    width: 23px;
+    vertical-align: bottom;
+    background: #fff;
+    border-radius: 50%;
+    padding: 1px;
+    margin-right: 5px;
+}
+body .outer-container .container.single-page { 
+    background: #fff;
+}
+body .outer-container .container.single-page .sidebar {
+    margin-top: 0px !important;
+}
+body .outer-container .container.single-page .sidebar .recent-post-wrap {
+    margin-top: 0px;
+}
+body .outer-container .container.single-page .content-wrap {
+    margin-top: 0px !important;
+}
+body.nimbus-is-editor .container.single-page .col-12.col-lg-4 {
+    border: 1px solid #87878742;
+    padding: 25px;
+    background: #fff;
+}
+body.nimbus-is-editor .container.single-page .col-12.col-lg-8 {
+    padding: unset;
+}
+body .outer-container .container.single-page .expertise-section {
+    border: 1px solid #87878742;
+    padding: 20px 30px;
+}
+body .outer-container .container.single-page .sidebar .recent-post-wrap figure img {
+    /* border-radius: 50%; */
+}
+body .outer-container .container.single-page .sidebar .about-me h3.profile-name {
+    font-size: 35px;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+body .outer-container .container.single-page .sidebar .github-follow-section a {
+    background: #000000d9;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 8px 6px;
+    font-size: 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+body .outer-container .container.single-page .sidebar .about-me p.designation {
+    margin: unset;
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+}
+body .outer-container .container.single-page .sidebar .about-me a.company-name {
+    color: #ff5200;
+    text-decoration: none;
+}
+body .outer-container .container.single-page .sidebar .about-me {
+    text-align: left;
+}
+body .outer-container .container.single-page .sidebar .about-me p.about {
+    color: #000;
+    font-family: sans-serif;
+    line-height: 21px;
+    padding-bottom: 25px;
+    text-align: left;
+}
+body .outer-container .container.single-page .sidebar .github-follow-section {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links {
+    padding: 0;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li {
+    list-style-type: none;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li a {
+    color: #ff5200;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-left: 5px;
+    text-decoration: none;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li i.fa {
+    line-height: 25px;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li i.fa.fa-envelope {
+    font-size: 14px;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li i.fa.fa-map-marker,
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li i.fa.fa-mobile {
+    font-size: 20px;
+}
+body .outer-container .container.single-page .sidebar .social-media-section .social-section ul.links {
+    padding: 0;
+    text-align: left;
+    margin: auto;
+}
+body .outer-container .container.single-page .sidebar .social-media-section .social-section ul.links li {
+    list-style-type: none;
+    display: -webkit-inline-box;
+    padding: 7px 13.6px;
+    margin: 5px;
+    background: #ff5200d6;
+    border: 1px solid #ff5200d6;
+}
+@media only screen and (max-width: 768px) {
+    body .outer-container .container.single-page .sidebar .social-media-section .social-section ul.links li {
+        padding: 7px 13px;
+    }
+}
+body .outer-container .container.single-page .sidebar .social-media-section .social-section ul.links li a {
+    color: #fff;
+}
+body .outer-container .container.single-page .sidebar .social-media-section .social-section ul.links li:first-of-type {
+    margin-left: 0;
+}
+body .outer-container .container.single-page .sidebar .social-media-section .social-section ul.links li:last-of-type {
+    margin-right: 0;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li a.instagram-link {
+    padding: unset;
+}
+body .outer-container .container.single-page .sidebar .address-and-contact-section ul.address-links li a.instagram-link img.instagram-image-link {
+    width: 100%;
+    margin-top: 20px;
+}
+body .outer-container .container.single-page .sidebar .magento-free-extention-section {
+    margin-top: 30px;
+}
+body .outer-container .container.single-page .sidebar .magento-free-extention-section a {
+    background: #ff5200d6;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 60px;
+    text-decoration: unset;
+    text-transform: uppercase;
+}
+body .outer-container .container.single-page .sidebar .magento-free-extention-section a img.magento-logo {
+    width: 16px;
+    vertical-align: sub;
+}
+body .outer-container .container.single-page .skilld-section .skill-and-language-content.hobby-section {
+    padding-top: 13px;
+}
+body .outer-container .container.single-page .sidebar .magento-free-extention-section a img.magento-logo {
+    width: 16px;
+}
+@media only screen and (max-width: 600px) {
+    body .outer-container .container.single-page {
+        padding-top: 20px;
+    }
+    body .outer-container .container.single-page .sidebar .magento-free-extention-section a {
+        padding: 10px 55px;
+    }
+}
+
+/* Main content css start from here */
+body .outer-container .container.single-page .expertise-section header.entry-header h2.entry-title,
+body .outer-container .container.single-page .skilld-section h2.entry-title {
+    font-size: 35px;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+body .outer-container .container.single-page .expertise-section .entry-content p {
+    font-size: 14px;
+    font-family: sans-serif;
+    margin: 10px 0;
+    font-weight: 100;
+}
+body .outer-container .container.single-page .skill-and-language-content .language-section ul.skill-links li img {
+    width: 70px;
+    margin: 0 5px;
+}
+body .outer-container .container.single-page .language-section ul.skill-links {
+    padding: unset;
+}
+body .outer-container .container.single-page .skilld-section {
+    border-bottom: 1px solid #87878742;
+    border-right: 1px solid #87878742;
+    padding: 20px 30px;
+}
+body .outer-container .container.single-page .language-section ul.skill-links li {
+    list-style-type: none;
+    display: inline-block;
+}
+body .outer-container .container.single-page .skill-and-language-content h4 {
+    margin: unset;
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-top: 4px;
+}
+body .outer-container .container.single-page .operating-system-section ul.system-links li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 10px;
+}
+body .outer-container .container.single-page .operating-system-section ul.system-links li img {
+    width: 80px;
+}
+body .outer-container .container.single-page .operating-system-section ul.system-links {
+    padding: unset;
+}
+body .outer-container .container.single-page .expertise-section p.time-periode {
+    font-size: 13px;
+    margin: unset;
+    margin-top: 20px;
+}
+body .outer-container .container.single-page .expertise-section h4.designation {
+    margin: unset;
+    font-size: 18px;
+    color: #000;
+    font-family: -webkit-body;
+    font-weight: 700 !important;
+    line-height: 20px;
+}
+body .outer-container .container.single-page .expertise-section .entry-content p.company-location {
+    margin: auto;
+    line-height: 0px;
+    margin-bottom: 20px;
+}
+body .outer-container .container.single-page .expertise-section ul.experience-list {
+    margin: unset;
+    padding: unset;
+}
+body .outer-container .container.single-page .expertise-section ul.experience-list li {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 100 !important;
+    font-family: sans-serif;
+}
+body .outer-container .container.single-page .expertise-section ul.experience-list li i.fa.fa-code {
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+body .outer-container .container.single-page section.section-wrapper.portfolio-section .container-fluid a.portfolio-item img {
+    width: 100%;
+    padding: 15px;
+}
+body .outer-container .container.single-page section.section-wrapper.portfolio-section .container-fluid .section-title h2 {
+    font-size: 35px;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+body .outer-container .container.single-page section.section-wrapper.portfolio-section {
+    border: 1px solid #87878742;
+}
+body .outer-container .container.single-page .entry-content.contact h4 {
+    margin: unset;
+    font-size: 18px;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+body .outer-container .container.single-page .entry-content.contact p {
+    margin: unset;
+}
