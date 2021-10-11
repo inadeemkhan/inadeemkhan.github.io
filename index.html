@@ -24,7 +24,53 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/theme.css">
 </head>
-    <body>
+    <body class="inadeemkhan">
+        <div class="widget-button">
+            <button id="contact-us">Hire Me</button>
+            <div class="contact-form">
+                <!--Section: Contact v.2-->
+                <section class="mb-4">
+
+                    <!--Section heading-->
+                    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                    <!--Section description-->
+                    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                        a matter of hours to help you.</p>
+                    <div class="row">
+                        <div class="col-md-12 mb-md-0 mb-5">
+                            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                                <div class="row"></div>
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <label for="name" class="">Your name</label>
+                                            <input type="text" id="name" name="name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <label for="email" class="">Your email</label>
+                                            <input type="text" id="email" name="email" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form">
+                                            <label for="message">Your message</label>
+                                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="text-center text-md-left">
+                                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--Section: Contact v.2-->
+            </div>
+        </div>
         <div class="outer-container">
             <div class="container single-page">
                 <div class="row">
@@ -119,21 +165,21 @@
                                 <h4>Programming Languages & Tools</h4>
                                 <div class="language-section">
                                     <ul class="skill-links">
-                                        <li><img src="images/skills/black-magento-logo.png" alt="Magento" title="Magento2"></i></li>
-                                        <li><img src="images/skills/black-php-logo.png" alt="Php" title="Php"></i></li>
-                                        <li><img src="images/skills/html-black-logo.jpg" alt="HTML5" title="HTML5"></i></li>
-                                        <li><img src="images/skills/black-css-logo.jpg" alt="CSS3" title="CSS3"></i></li>
-                                        <li><img src="images/skills/black-js-logo.jpg" alt="JavaScript" title="JavaScript"></i></li>
-                                        <li><img src="images/skills/git-logo-1.png" alt="Git" title="Github & Gitlab"></i></li>
+                                        <li><img src="images/skills/black-magento-logo.png" alt="Magento" title="Magento2"></i><p>Magento</p></li>
+                                        <li><img src="images/skills/black-php-logo.png" alt="Php" title="Php"></i><p>PHP</p></li>
+                                        <li><img src="images/skills/html-black-logo.jpg" alt="HTML5" title="HTML5"></i><p>HTML5</p></li>
+                                        <li><img src="images/skills/black-css-logo.jpg" alt="CSS3" title="CSS3"></i><p>CSS3</p></li>
+                                        <li><img src="images/skills/black-js-logo.jpg" alt="JavaScript" title="JavaScript"></i><p>JavaScript</p></li>
+                                        <li><img src="images/skills/git-logo-1.png" alt="Git" title="Github & Gitlab"></i><p>Github</p></li>
                                     </ul>
                                 </div>
                                 <h4>Operating System</h4>
                                 <div class="operating-system-section">
                                     <ul class="system-links">
-                                        <li><img src="images/operating-system/window-logo.png" alt="Window" title="Window Syatem"></i></li>
-                                        <li><img src="images/operating-system/linux-tux-logo-linux.jpg" alt="Linux" title="Linux System"></i></li>
-                                        <li><img src="images/operating-system/apple-logo.png" alt="Apple" title="MacBook"></i></li>
-                                        <li><img src="images/operating-system/android-logo.jpg" alt="Android" title="Android"></i></li>
+                                        <li><img src="images/operating-system/window-logo.png" alt="Window" title="Window Syatem"></i><p>Window</p></li>
+                                        <li><img src="images/operating-system/linux-tux-logo-linux.jpg" alt="Linux" title="Linux System"></i><p>Ubuntu</p></li>
+                                        <li><img src="images/operating-system/apple-logo.png" alt="Apple" title="MacBook"></i><p>Apple</p></li>
+                                        <li><img src="images/operating-system/android-logo.jpg" alt="Android" title="Android"></i><p>Android</p></li>
                                     </ul>
                                 </div>
                             </div>
@@ -216,9 +262,9 @@
                             <div class="skill-and-language-content hobby-section">
                                 <div class="language-section">
                                     <ul class="skill-links">
-                                        <li><img src="images/hobby/photography.png" title="Photograpyvia mobile"></i></li>
-                                        <li><img src="images/hobby/gamepad.png" title="Games Play"></i></li>
-                                        <li><img src="images/hobby/headphones.jpeg" title="Listening Muzic"></i></li>
+                                        <li><img src="images/hobby/photography.png" title="Photograpyvia mobile"></i><p>Photography</p></li>
+                                        <li><img src="images/hobby/gamepad.png" title="Games Play"></i><p>Gaming</p></li>
+                                        <li><img src="images/hobby/headphones.jpeg" title="Listening Muzic"></i><p>Music</p></li>
                                     </ul>
                                 </div>
                             </div>
@@ -232,6 +278,49 @@
                                             <h2>Portfolio</h2>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://mobilegadgethub.com/">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/mobilegadget.png" alt="Mobile Gadget Hub">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>Mobile Gadget Hub</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://www.eyeque.com/">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/Eyeque.png" alt="EyeQue">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>EyeQue</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://www.offroaddesign.com/">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/offroaddesign.png" alt="Off Road Designs">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>Off Road Designs</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://www.aed.us/">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/aed.png" alt="AED">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>AED</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                        
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3">
@@ -254,7 +343,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-md-3">
+                                    <!-- <div class="col-md-3">
                                         <a class="portfolio-item" target="_blank" href="https://testnative.com/">
                                             <div class="portfolio-thumb">
                                                 <img src="images/portfolio/testnative.png" alt="testnative.png">
@@ -263,8 +352,8 @@
                                                 <p>Test Negative</p>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="col-md-3">
+                                    </div> -->
+                                    <!-- <div class="col-md-3">
                                         <a class="portfolio-item" target="_blank" href="https://www.sayshaglobal.com/">
                                             <div class="portfolio-thumb">
                                                 <img src="images/portfolio/saysha.png" alt="Saysha Global">
@@ -273,11 +362,41 @@
                                                 <p>Saysha Global</p>
                                             </div>
                                         </a>
+                                    </div> -->
+                                    <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://zaksjerusalemgifts.com/">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/jaksjeru.png" alt="JackJerusalem">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>zak's Jerusalem Gifts</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://attuale.com/">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/attuale.png" alt="Attuale">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>Attuale Space</p>
+                                            </div>
+                                        </a>
+                                    </div> -->
+                                    <div class="col-md-3">
+                                        <a class="portfolio-item" target="_blank" href="https://www.linkedin.com/in/inadeemkhan">
+                                            <div class="portfolio-thumb">
+                                                <img src="images/portfolio/know-more-portfolio.png" alt="Know More">
+                                            </div>
+                                            <div class="portfolio-heading">
+                                                <p>Know More</p>
+                                            </div>
+                                        </a>
                                     </div>
                         
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <!-- <div class="col-md-3">
                                         <a class="portfolio-item" target="_blank" href="https://zaksjerusalemgifts.com/">
                                             <div class="portfolio-thumb">
                                                 <img src="images/portfolio/jaksjeru.png" alt="JackJerusalem">
@@ -296,8 +415,9 @@
                                                 <p>Attuale Space</p>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="col-md-3">
+                                    </div> -->
+                                    
+                                    <!-- <div class="col-md-3">
                                         <a class="portfolio-item" target="_blank" href="https://hostevie.com/">
                                             <div class="portfolio-thumb">
                                                 <img src="images/portfolio/nostevie.png" alt="Ho Steve">
@@ -306,17 +426,8 @@
                                                 <p>Ho Steve</p>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <a class="portfolio-item" target="_blank" href="https://www.linkedin.com/in/inadeemkhan">
-                                            <div class="portfolio-thumb">
-                                                <img src="images/portfolio/know-more-portfolio.png" alt="Know More">
-                                            </div>
-                                            <div class="portfolio-heading">
-                                                <p>Know More</p>
-                                            </div>
-                                        </a>
-                                    </div>
+                                    </div> -->
+                                    
                         
                                 </div>
                                 <!-- /.row -->
@@ -353,5 +464,15 @@
         <script type='text/javascript' src='js/jquery.js'></script>
         <script type='text/javascript' src='js/swiper.min.js'></script>
         <script type='text/javascript' src='js/custom.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
 </html>
+
+
+<script>
+$(document).ready(function(){
+    $("button#contact-us").click(function(event){
+        $(".widget-button .contact-form").show();
+    });  
+});
+</script>
