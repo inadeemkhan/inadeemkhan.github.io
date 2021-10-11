@@ -43,9 +43,10 @@ html {
 }
 
 body {
-  background-color: #0ba376;
+/*   background-color: #0ba376;
   background: -webkit-gradient(linear, left top, left bottom, from(#0b7080), to(#0ba376));
-  background: linear-gradient(#0b7080, #0ba376);
+  background: linear-gradient(#0b7080, #0ba376); */
+  background: #000;
   margin: 0;
   width: 100%;
   height: 100%;
