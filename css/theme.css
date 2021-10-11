@@ -14,7 +14,12 @@ body .outer-container .container.single-page {
     background: #fff;
 }
 body .outer-container .container.single-page .sidebar {
-    margin-top: 0px !important;
+    position: sticky;
+    min-height: 450px;
+    background: #efefef;
+    top: 4%;
+    padding-left: 15px;
+    margin-top: 0;
 }
 body .outer-container .container.single-page .sidebar .recent-post-wrap {
     margin-top: 0px;
