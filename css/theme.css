@@ -18,6 +18,7 @@ body .outer-container .container.single-page .sidebar {
 }
 body .outer-container .container.single-page .sidebar .recent-post-wrap {
     margin-top: 0px;
+    padding: 20px;
 }
 body .outer-container .container.single-page .content-wrap {
     margin-top: 0px !important;
@@ -35,7 +36,7 @@ body .outer-container .container.single-page .expertise-section {
     padding: 20px 30px;
 }
 body .outer-container .container.single-page .sidebar .recent-post-wrap figure img {
-    /* border-radius: 50%; */
+    border-radius: 50%;
 }
 body .outer-container .container.single-page .sidebar .about-me h3.profile-name {
     font-size: 35px;
@@ -191,6 +192,7 @@ body .outer-container .container.single-page .language-section ul.skill-links {
 body .outer-container .container.single-page .skilld-section {
     border-bottom: 1px solid #87878742;
     border-right: 1px solid #87878742;
+    border-left: 1px solid #87878742;
     padding: 20px 30px;
 }
 body .outer-container .container.single-page .language-section ul.skill-links li {
@@ -250,15 +252,28 @@ body .outer-container .container.single-page .expertise-section ul.experience-li
     padding-right: 5px;
 }
 body .outer-container .container.single-page section.section-wrapper.portfolio-section .container-fluid a.portfolio-item img {
+    border-radius: 50%;
+    border: 1px solid #ccc;
     width: 100%;
-    padding: 15px;
+}
+body .outer-container .container.single-page section.section-wrapper.portfolio-section .container-fluid a.portfolio-item .portfolio-heading p {
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    line-height: 1;
+}
+body .outer-container .container.single-page section.section-wrapper.portfolio-section .container-fluid a.portfolio-item .portfolio-heading p:hover {
+    /* color: #ccc; */
+    text-decoration: unset !important;
 }
 body .outer-container .container.single-page section.section-wrapper.portfolio-section .container-fluid .section-title h2 {
     font-size: 35px;
     color: #000;
     text-align: left;
     margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-left: 20px;
     text-transform: uppercase;
 }
@@ -275,4 +290,11 @@ body .outer-container .container.single-page .entry-content.contact h4 {
 }
 body .outer-container .container.single-page .entry-content.contact p {
     margin: unset;
+}
+body .outer-container .container.single-page .banner-img {
+    width: 100%;
+}
+body .outer-container .container.single-page .banner-img img {
+    width: 100%;
+    padding: 20px;
 }
