@@ -373,7 +373,7 @@ body.inadeemkhan .widget-button button#contact-us:hover {
 }
 .widget-button .contact-form section.mb-4 p {
     margin-bottom: 10px !important;
-    text-align: justify !important;
+    text-align: -webkit-center !important;
     font-size: 14px;
     font-weight: 100 !important;
 }
@@ -417,4 +417,9 @@ body.inadeemkhan .widget-button button#contact-us:hover {
     font-family: 'HelveticaNeueLTPro-Md';
     font-style: unset;
     color: #000;
+    margin: 0 10px;
+}
+.widget-button .contact-form label {
+    font-size: 14px;
+    font-family: inherit;
 }
