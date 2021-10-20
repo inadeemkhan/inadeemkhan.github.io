@@ -58,3 +58,6 @@ section[data-id='resume'] .timeline-second-style .right-part p {
     font-weight: 300;
     border-radius: 5px;
 }
+.portfolio-grid.three-columns figure {
+    width: 48%;
+}
