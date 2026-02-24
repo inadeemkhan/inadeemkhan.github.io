@@ -126,10 +126,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 80px;
-    color: white;
+    overflow: hidden;
     box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
     animation: pulse 2s ease-in-out infinite;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-img i {
+    font-size: 80px;
+    color: white;
 }
 
 @keyframes pulse {
@@ -390,6 +400,18 @@ a {
 /* =============================================
    Skills Section
    ============================================= */
+.skill-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.skill-list li {
+    padding: 12px 0;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -618,6 +640,14 @@ a {
     transform: translateY(-10px);
     border-color: var(--accent-cyan);
     box-shadow: 0 20px 40px rgba(0, 217, 255, 0.1);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .portfolio-item i {
