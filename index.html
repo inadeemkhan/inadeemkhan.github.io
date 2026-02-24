@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadeem Khan - Magento2 Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --dark-gray: #1a1a1a;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-gray);
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: shimmer 15s infinite linear;
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .profile-img i {
+            font-size: 80px;
+            color: var(--light-gray);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        section {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: var(--white);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .contact-item span {
+            color: #555;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: '✓';
+            color: var(--accent-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent-color), var(--primary-color));
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 3px var(--accent-color);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .company {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .period {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--white);
+            border-radius: 20px;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .timeline-item ul li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-item ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .education-card {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .education-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .education-card .year {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .education-card p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .education-card .percentage {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .portfolio-item span {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Knowledge Section */
+        .knowledge-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .knowledge-tag {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .knowledge-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item::before {
+                left: -29px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>Nadeem Khan</h1>
+            <p class="title">Adobe Certified Professional Magento2 Developer</p>
+            <p>7+ Years of Experience in Magento Development</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/inadeemkhan" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/inadeemkhan" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:khannadeem243@gmail.com" target="_blank" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/inadeem_kassar" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100003804160599" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/NadeemK96970793" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=919717599422" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a web developer with a Bachelor of Technology (B.Tech.) degree in Computer Science & Engineering from AKTU and I have 7+ years of experience in Magento Migration, Custom Development, Extensions & Themes Development.</p>
+                    <p>Having expertise working with many clients to build their eCommerce websites using Magento 1.x & 2.x. I am passionate about creating efficient and scalable eCommerce solutions.</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <span>Age: 27</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Golf City, Sector 75, Noida, India</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>khannadeem243@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9717599422</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Freelance Available</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Magento 1.x & 2.x</li>
+                        <li>PHP</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Git / GitHub / GitLab</li>
+                        <li>GraphQL</li>
+                        <li>REST API</li>
+                        <li>MySQL</li>
+                        <li>JIRA / Asana</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                    <ul class="skill-list">
+                        <li>Windows</li>
+                        <li>Ubuntu / Linux</li>
+                        <li>macOS</li>
+                        <li>Android</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-paint-brush"></i> Web Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Web Design</li>
+                        <li>Theme Development</li>
+                        <li>Extension Development</li>
+                        <li>Magento Migration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Magento Developer (IT Consultant)</h3>
+                    <p class="company">Krypson Infomatics Pvt Ltd</p>
+                    <span class="period">September 2020 - Current</span>
+                    <ul>
+                        <li>Working as a Magento2 Developer and IT Consultant</li>
+                        <li>Have executed several projects on GitHub</li>
+                        <li>Worked on Magento Extensions (Admin and Frontend)</li>
+                        <li>Theme Development (Admin and Frontend)</li>
+                        <li>Debugging and performance optimization</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Magento Developer</h3>
+                    <p class="company">Excellence Technologies Pvt. Ltd.</p>
+                    <span class="period">March 2018 - June 2020</span>
+                    <ul>
+                        <li>Worked as a Magento Developer</li>
+                        <li>Executed several eCommerce projects</li>
+                        <li>Extension and Theme Development</li>
+                        <li>Worked on Social Promotion Lead for xMagestore.com</li>
+                        <li>Debugging and maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Bachelor of Technology</h3>
+                    <p class="year">2014 - 2017</p>
+                    <p>Computer Science & Engineering</p>
+                    <p>Abdul Kalam Technical University (AKTU)</p>
+                    <p class="percentage">67%</p>
+                </div>
+                <div class="education-card">
+                    <h3>Polytechnic Diploma</h3>
+                    <p class="year">2011 - 2014</p>
+                    <p>Information Technologies</p>
+                    <p>Government Polytechnic Ghaziabad</p>
+                    <p class="percentage">69%</p>
+                </div>
+                <div class="education-card">
+                    <h3>12th Board</h3>
+                    <p class="year">2011</p>
+                    <p>PCM (Physics, Chemistry, Math)</p>
+                    <p>UP Board</p>
+                    <p class="percentage">58%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2 class="section-title">Portfolio Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>Mobile Gadget Hub</h4>
+                    <span>Magento2 Project</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-store"></i>
+                    <h4>Darwin</h4>
+                    <span>Magento2 Project</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>AED US</h4>
+                    <span>Magento2 Project</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-truck"></i>
+                    <h4>Off Road Designs</h4>
+                    <span>Magento2 Project</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h4>The Bumbag.co</h4>
+                    <span>Magento2 Project</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-gift"></i>
+                    <h4>Zaks Jerusalem</h4>
+                    <span>Magento2 Project</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h4>Linneo Member Discount</h4>
+                    <span>Magento2 Extension</span>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fab fa-instagram"></i>
+                    <h4>Instagram Feed Module</h4>
+                    <span>Magento2 Extension</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Section -->
+        <section id="knowledge">
+            <h2 class="section-title">Knowledge</h2>
+            <div class="knowledge-tags">
+                <span class="knowledge-tag">Magento 1.x & 2.x</span>
+                <span class="knowledge-tag">GraphQL</span>
+                <span class="knowledge-tag">REST API</span>
+                <span class="knowledge-tag">Web Design</span>
+                <span class="knowledge-tag">Design Enhancement</span>
+                <span class="knowledge-tag">MySQL</span>
+                <span class="knowledge-tag">GitHub & GitLab</span>
+                <span class="knowledge-tag">Asana</span>
+                <span class="knowledge-tag">BaseCamp</span>
+                <span class="knowledge-tag">JIRA</span>
+                <span class="knowledge-tag">Problem Solving</span>
+                <span class="knowledge-tag">Social Networking</span>
+                <span class="knowledge-tag">Flexibility</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2021 <a href="https://www.linkedin.com/in/inadeemkhan" target="_blank">Nadeem Khan</a>. All rights reserved.</p>
+    </footer>
+</body>
+</html>
